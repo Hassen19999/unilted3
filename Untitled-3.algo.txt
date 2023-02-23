@@ -1,0 +1,14 @@
+def est_palindrome(mot):
+    Arguments :
+    mot -- le mot à tester
+    Retourne :
+    True si le mot est un palindrome, False sinon
+        if len(mot) <= 1:
+        return True
+    else:
+        if mot[0] == mot[-1]:
+            # si les deux caractères sont égaux, on teste le reste du mot récursivement
+            return est_palindrome(mot[1:-1])
+        else:
+            # si les deux caractères sont différents, le mot n'est pas un palindrome
+            return False
